@@ -1,0 +1,174 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0 5%;
+    background-image: #000000;
+    background-image: url('../assets/images/cinema-min.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    margin: 2.6em 0 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+article {
+    max-width: 900px;
+    border: 0;
+    margin: 4em auto 0;
+    border-radius: 0.8em 0.8em 0 0;
+    padding: 3em 3.5em 6em;
+    background-color: rgba(255, 255, 255, 0.93);
+}
+
+h1 {
+    margin: 0.9em 0;
+    font-size: 2.12em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    margin: 0.8em 0.5em;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+article p {
+    margin: 1.2em 2em;
+    text-indent: 2em;
+    line-height: 1.5em;
+}
+
+hr {
+    border: 1px 0 dashed #000;
+    margin: 2em auto;
+    height: 0;
+    width: 80%;
+}
+
+ol li {
+    margin: 1.2em 0;
+}
+
+ol p {
+    margin: 0.6em 2em 0.6em 0.5em;
+}
+
+ol p:nth-of-type(1) {
+    text-indent: 0;
+}
+
+ol.reasons {
+    padding: 0 6em;
+}
+
+ol.reasons li {
+    margin: 0.4em 0;
+}
+
+small {
+    font-size: 0.64em;
+    letter-spacing: 0;
+}
+
+del {
+    display: none;
+}
+
+article > p:last-child::after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+.title {
+    margin: 1.6em auto 0.8em;
+    font-size: 3.6em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.authors, .teacher {
+    margin: 0.6em auto 0.1em;
+    font-size: 1.12em;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+}
+
+img.index-compare {
+    display: block;
+    width: 500px;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+iframe {
+    margin: 1.5em auto;
+}
+
+.chart {
+    margin: 2em auto;
+}
+
+#schedule-provinces {
+    width: 600px;
+    height: 480px;
+}
+
+#trends-between-new-and-old-movies {
+    width: 90%;
+    height: 400px;
+}
+
+#trends-of-yuanfen, #trends-of-yuanfen-2 {
+    width: 80%;
+    height: 350px;
+}
+
+.conclusion-reasons {
+    width: 680px;
+    margin: 1.2em auto 0;
+    padding: 0.5em;
+    overflow: auto;
+}
+
+#reasons {
+    width: 380px;
+    height: 280px;
+    float: left;
+    margin: 0 0.5em;
+}
+
+.conclusion-reasons p {
+    margin: 0.5em 0.5em;
+}
+
+#boxes-2016, #boxes-old-movies {
+    width: 800px;
+    height: 600px;
+}
+
+#average-of-boxes {
+    width: 80%;
+    height: 350px;
+}

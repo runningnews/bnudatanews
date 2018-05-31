@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>除了“长江学者”，还有哪些选择？</title>
+		<!-- 引入 echarts.js -->
+		<!-- 这里是加载刚下好的echarts.min.js，注意路径 -->
+		<link rel="stylesheet" type="text/css" href="style/style.css" >
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="js/bootstrap.min.css" />
+		<script src="echarts.js"></script>
+		<script src="js/customed.js"></script>
+		<script src="func.js"></script>
+		<script src="jquery.min.js" type="text/javascript"></script>
+	</head>
+
+	<body onload="init()">
+		<header>
+			<p class="title" style="font-size:50px">除了“长江学者”，还有哪些选择？</p>
+
+		</header>
+		<div class="toc"></div>
+		<article>
+			<p>近日，教育部公布了2017年度“长江学者奖励计划”正式名单，清华大学以23位教师 入选居于首位。各大高校也纷纷在各自官方通道公布本校入选名单，好一派峥嵘景象。“长江学者”素有“准院士”之称，入选为特聘教授不仅是对学者著作等身的肯定，更以优厚的待遇激励更多成果的输出。</p>
+			<br>
+			<p>然而，在高等教育投入不断增多的今天依然面临着“僧多粥少”的境况。根据《2016年中国统计年鉴》，高等学校研究与试验发展所投入的人员为85.2万。而“长江学者奖励计划”每年支持高校聘任150名特聘教授、50名讲座教授。激烈的竞争意味着大概率的淘汰比。但科研还需继续，除了长江学者计划外，各研究人员还有更合适的选择吗？</p>
+			
+<br>
+<h3>——中国“学者”有几般？</h3>
+<br>
+<p>中国各类学者称号，从河流湖海到名山大川，再到名人轶事，各式行头称号构建起了学术界的江湖——不同省、市、校级的学者争鸣。“长江学者奖励计划” 作为高校学者奖励计划的“龙首”，不仅切实吸引和培养了一批具有国际影响力的领军人才，也刺激了全国高校对于高等人才的引进热潮。一般而言，各类学者引进计划包含特聘教授、讲座教授和青年学者三类人才。在此，我们通过查询政府和高校官网学者计划相关文件，共统计120余位学者数据。统计发现，全国学者计划总体呈现中东部多，西部少的特点，中部湖北全省设立学者计划种类最多，共有10个学者计划。</p>
+
+            <div id="schedule-provinces1" class="chart" style="width:500px;height:400px">
+			</div>
+			<script type="text/javascript"></script>
+			<script src="scripts/china.js"></script>
+			<script>
+				var chartScheduleProvinces1 = echarts.init(document.getElementById('schedule-provinces1'));
+
+				optionScheduleProvinces1 = {
+					title: {
+		text:"各省级行政区“学者计划”数量分布",				
+        x: "left"
+    },
+    tooltip: {
+        trigger: "item",
+        borderWidth: 0,
+        borderColor: "rgb(242, 242, 242)"
+    },
+    dataRange: {
+        min: 0,
+        max: 12,
+        x: "left",
+        y: "bottom",
+        text: ["高", "低"],
+        calculable: true
+    },
+    toolbox: {
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: false
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        },
+        show: true,
+        orient: "vertical",
+        y: "bottom",
+        x: "right"
+    },
+    roamController: {
+        mapTypeControl: {
+            china: true
+        },
+        x: "right"
+    },
+    series: [
+        {
+            type: "map",
+            name: "省份",
+            map:'china',
+            showLegendSymbol: true,
+            selectedMode: "multiple",
+            hoverable: true,
+            itemStyle: {
+                normal: {
+                    borderColor: "rgb(171, 173, 162)",
+                    label: {
+                        show: false
+                    }
+                }
+            },
+            mapType: "china",
+            data: [
+                {
+								value: 3,
+								name: "北京"
+							},
+							{
+								value: 4,
+								name: "福建"
+							},
+                {
+                    value: 6,
+                    name: "江苏"
+                },
+                {
+                    value: 7,
+                    name: "广东"
+                },
+                {
+                    value: 8,
+                    name: "辽宁"
+                },
+                {
+                    value: 2,
+                    name: "河北"
+                },
+                {
+                    value: 7,
+                    name: "上海"
+                },
+                {
+                    value: 3,
+                    name: "天津"
+                },
+                {
+                    value: 4,
+                    name: "山东"
+                },
+                {
+                    value: 6,
+                    name: "浙江"
+                },
+                {
+                    value: 2,
+                    name: "安徽"
+                },
+                {
+                    value: 4,
+                    name: "河南"
+                },
+                {
+                    value: 1,
+                    name: "黑龙江"
+                },
+                {
+                    value: 12,
+                    name: "湖北"
+                },
+                {
+                    value: 6,
+                    name: "湖南"
+                },
+                {
+                    value: 1,
+                    name: "内蒙古"
+                },
+                {
+                    value: 6,
+                    name: "江西"
+                },
+                {
+                    value: 1,
+                    name: "山西"
+                },
+                {
+                    value: 2,
+                    name: "甘肃"
+                },
+                {
+                    value: 3,
+                    name: "广西"
+                },
+                {
+                    value: 1,
+                    name: "青海"
+                },
+                {
+                    value: 1,
+                    name: "宁夏"
+                },
+                {
+                    value: 8,
+                    name: "陕西"
+                },
+                {
+                    value: 4,
+                    name: "四川"
+                },
+                {
+                    value: 1,
+                    name: "西藏"
+                },
+                {
+                    value: 2,
+                    name: "新疆"
+                },
+                {
+                    value: 2,
+                    name: "云南"
+                },
+                {
+                    value: 1,
+                    name: "重庆"
+                },
+                {
+                    value: 1,
+                    name: "香港"
+                },
+                {
+                    value: 1,
+                    name: "吉林"
+                },
+                {
+                    value: 1,
+                    name: "贵州"
+                },
+                {
+                    value: 1,
+                    name: "海南"
+                }
+            ]
+        }
+    ],
+}
+				chartScheduleProvinces1.setOption(optionScheduleProvinces1);
+			</script>
+
+				<p>然而，如今流行大江南北的学者奖励制度，只有不到20年的发酵成长时间。90年代，为改良中国经济产业结构和实现现代化转型，在发展科学技术的要求下提出了“科教兴国”战略，“高层次创造性人才计划”应运而生。1998年，教育部和李嘉诚基金会共同启动实施了“长江学者奖励计划”。而后，以长江学者为标杆，各类学者计划也逐渐发展起来。</p>
+			
+            <br>
+            <h3>——海龟、高学历、paper大神……就够了吗？</h3>
+            <br>
+			<p>除去“长江学者”为国家级教育部直属外，其他学者计划分为省级、市级和校级管理的三个层次。虽然有明确的等级划分，但不同等级的评选要求并非呈差序分布。</p>
+
+			<div>
+				<img src="sanky.gif" class="index-compare">
+			</div>
+            <p>论文和专著之外，奖项与科研项目是证明学术能力的重要指标。除小部分如“杏林”、“金山”等学者要求国家级奖项和国家级重点科研项目经历，大部分评选对于竞选人的“奖项”和“科研”经历并没有明确说明。但如上图所示，学者计划评选条件的个体差异化比较明显，等级高低并不影响标准的升降。</p>
+
+			
+				<p>现有中国高等教育资源分布与经济发展分布情况高度重合，越是经济发达的东部经济带，其高等学府、科研机构及配套设施资源愈加丰富。这些地区又是否会提高学者计划评选的门槛呢？</p>
+
+                <p>将各学者计划的评选条件量化后发现，云南、重庆和山东三地以4.29的高条件指数领先。全国来看，学者计划的评选条件与地理位置和经济发展并无显著关系，多呈交叉嵌入分布。</p>
+			
+			<div id="schedule-provinces2" class="chart" style="width:600px;height:400px;">
+</div>
+    <script type="text/javascript"></script>
+    <script src="scripts/china.js"></script>
+    <script>
+    var chartScheduleProvinces2 = echarts.init(document.getElementById('schedule-provinces2'));
+
+optionScheduleProvinces2 ={
+    title: {
+        text:"各省“学者计划”条件指数分布",
+        x: "left"
+    },
+    tooltip: {
+        trigger: "item"
+    },
+    dataRange: {
+        min: 1.21,
+        max: 4.29,
+        y: "bottom",
+        text: ["高", "低"],
+        calculable: true,
+        precision: 2,
+        x: "left"
+    },
+    toolbox: {
+        show: false,
+        orient: "vertical",
+        x: "right",
+        y: "bottom",
+        feature: {
+            dataView: {
+                readOnly: false,
+                show: true
+            },
+            mark: {
+                show: true
+            },
+            magicType: {
+                show: false
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    roamController: {
+        show: false,
+        x: "right",
+        mapTypeControl: {
+            china: true
+        },
+        handlerColor: "rgb(97, 185, 226)",
+        fillerColor: "#fff",
+        borderWidth: 0
+    },
+    series: [
+        {
+            type: "map",
+            name: "条件分",
+            map:'china',
+            data: [
+                {
+                    value: 2.75,
+                    name: "新疆"
+                },
+                {
+                    value: 1.21,
+                    name: "北京"
+                },
+                {
+                    value: 1.41,
+                    name: "河北"
+                },
+                {
+                    value: 1.66,
+                    name: "江西"
+                },
+                {
+                    value: 2.17,
+                    name: "宁夏"
+                },
+                {
+                    value: 2.24,
+                    name: "广东"
+                },
+                {
+                    value: 2.36,
+                    name: "西藏"
+                },
+                {
+                    value: 2.47,
+                    name: "内蒙古"
+                },
+                {
+                    value: 2.51,
+                    name: "浙江"
+                },
+                {
+                    value: 2.55,
+                    name: "辽宁"
+                },
+                {
+                    value: 2.56,
+                    name: "上海"
+                },
+                {
+                    value: 2.63,
+                    name: "湖北"
+                },
+                {
+                    value: 2.64,
+                    name: "江苏"
+                },
+                {
+                    value: 2.67,
+                    name: "香港"
+                },
+                {
+                    value: 2.67,
+                    name: "山西"
+                },
+                {
+                    value: 2.69,
+                    name: "安徽"
+                },
+                {
+                    value: 2.7,
+                    name: "广西"
+                },
+                {
+                    value: 2.71,
+                    name: "天津"
+                },
+                {
+                    value: 2.76,
+                    name: "陕西"
+                },
+                {
+                    value: 2.86,
+                    name: "甘肃"
+                },
+                {
+                    value: 2.86,
+                    name: "四川"
+                },
+                {
+                    value: 2.9,
+                    name: "青海"
+                },
+                {
+                    value: 2.9,
+                    name: "黑龙江"
+                },
+                {
+                    value: 3,
+                    name: "湖南"
+                },
+                {
+                    value: 3.06,
+                    name: "河南"
+                },
+                {
+                    value: 3.22,
+                    name: "福建"
+                },
+                {
+                    value: 4.29,
+                    name: "山东"
+                },
+                {
+                    value: 4.29,
+                    name: "云南"
+                },
+                {
+                    value: 4.29,
+                    name: "重庆"
+                }
+            ]
+        }
+    ],
+
+}
+chartScheduleProvinces2.setOption(optionScheduleProvinces2);
+
+    </script>
+ <p>【图注：将各学者计划要求的学历、职称、年龄、奖项和科研各项内容量化，并进行归一化处理，取相同权重相加得到“条件指数”。】</p>
+            <div id="condition" class="chart" style="width:600px;height:600px;">
+			</div>
+			<script>
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('condition'));
+				var data = [{
+    name: '东部地区2.76',
+    itemStyle: {
+        color: '#f0871a'
+    },
+    children: [{
+        name: '河北省1.41',
+        value: 1,
+        itemStyle: {
+            color: '#fad7b2'
+        },
+        children: [{
+            name: '元光学者1.41',
+            value: 1,
+            itemStyle: {
+                color: '#fbd2a7'
+            }
+        }]
+    }, {
+        name: '北京市2.13',
+        itemStyle: {
+            color: '#f7c28b'
+        },
+        children: [{
+            name: '白杨学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#fdd5ab'
+            }
+        }, {
+            name: '北京学者2.06',
+            value: 1,
+            itemStyle: {
+                color: '#facea1'
+            }
+        }, {
+            name: '长城学者3.12',
+            value: 1,
+            itemStyle: {
+                color: '#f8c795'
+            }
+        }]
+    },{
+        name: '江苏省2.26',
+        itemStyle: {
+            color: '#f5b879'
+        },
+        children: [
+            {
+            name: '越崎学者1.21',
+            value: 1,
+            itemStyle: {color: '#fbd8b4'}
+        },
+        {
+            name: '长空学者1.71',
+            value: 1,
+            itemStyle: {
+                color: '#fbd4ab'
+            }
+        }, {
+            name: '紫金学者2.07',
+            value: 1,
+            itemStyle: {
+                color: '#fcd0a2'
+            }
+        }, {
+            name: '钟山学者2.67',
+            value: 1,
+            itemStyle: {color: '#fac996'}
+        }, {
+            name: '东吴学者2.87',
+            value: 1,
+            itemStyle: {color: '#fbc48c'}
+        }, {
+            name: '太湖学者3.02',
+            value: 1,
+            itemStyle: {color: '#f7be84'}
+        }]
+    },{
+        name: '天津市2.30',
+        value: 1,
+        itemStyle: {
+            color: '#f6b26c'
+        },
+        children: [{
+            name: '北洋学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#f8c591'
+            }
+        },{
+            name: '天工学者2.77',
+            value: 1,
+            itemStyle: {
+                color: '#f6be85'
+            }
+        },{
+            name: '海河学者2.92',
+            value: 1,
+            itemStyle: {
+                color: '#f6b97b'
+            }
+        }]
+    },{
+        name: '广东省2.38',
+        itemStyle: {
+            color: '#f4a95c'
+        },
+        children: [
+            {
+            name: '兴华学者1.83',
+            value: 1,
+            itemStyle: {color: '#f6c696'}
+        },
+        {
+            name: '南岭学者2.16',
+            value: 1,
+            itemStyle: {
+                color: '#f6c28c'
+            }
+        }, {
+            name: '鹏城学者2.43',
+            value: 1,
+            itemStyle: {
+                color: '#f5bc81'
+            }
+        }, {
+            name: '荔园学者2.67',
+            value: 1,
+            itemStyle: {color: '#f4b676'}
+        }, {
+            name: '珠江学者2.80',
+            value: 1,
+            itemStyle: {color: '#f4b06b'}
+        }]
+    },{
+        name: '香港2.67',
+        value: 1,
+        itemStyle: {
+            color: '#e99f52'
+        },
+        children: [{
+            name: '香江学者2.67',
+            value: 1,
+            itemStyle: {
+                color: '#eea860'
+            }
+        }]
+    },{
+        name: '辽宁省2.71',
+        itemStyle: {
+            color: '#f69939'
+        },
+        children: [
+            {
+            name: '金普学者1.21',
+            value: 1,
+            itemStyle: {color: '#fcc58b'}
+        },
+        {
+            name: '腾飞学者1.61',
+            value: 1,
+            itemStyle: {
+                color: '#fdbf80'
+            }
+        }, {
+            name: '首山学者2.17',
+            value: 1,
+            itemStyle: {
+                color: '#fdba75'
+            }
+        }, {
+            name: '星海学者3.02',
+            value: 1,
+            itemStyle: {color: '#fbb56c'}
+        }, {
+            name: '辽河学者3.12',
+            value: 1,
+            itemStyle: {color: '#faaf62'}
+        }, {
+            name: '湛蓝学者3.28',
+            value: 1,
+            itemStyle: {color: '#f9aa58'}
+        }, {
+            name: '攀登学者3.37',
+            value: 1,
+            itemStyle: {color: '#f8a54f'}
+        }, {
+            name: '天柱山学者3.91',
+            value: 1,
+            itemStyle: {color: '#f79f45'}
+        }]
+    }, {
+        name: '广西省2.84',
+        itemStyle: {
+            color: '#e49440'
+        },
+        children: [{
+            name: '漓江学者1.81',
+            value: 1,
+            itemStyle: {
+                color: '#f4a858'
+            }
+        }, {
+            name: '八桂学者3.07',
+            value: 1,
+            itemStyle: {
+                color: '#efa04e'
+            }
+        }, {
+            name: '卓越学者3.66',
+            value: 1,
+            itemStyle: {
+                color: '#e99b48'
+            }
+        }]
+    },{
+        name: '浙江省2.94',
+        itemStyle: {
+            color: '#c67f35'
+        },
+        children: [
+            {
+            name: '钱江学者2.27',
+            value: 1,
+            itemStyle: {color: '#e5a35e'}
+        },
+        {
+            name: '瓯江学者2.37',
+            value: 1,
+            itemStyle: {
+                color: '#e09d58'
+            }
+        }, {
+            name: '求是特聘学者2.70',
+            value: 1,
+            itemStyle: {
+                color: '#dc9851'
+            }
+        }, {
+            name: '西湖学者3.02',
+            value: 1,
+            itemStyle: {color: '#d6914a'}
+        }, {
+            name: '甬江学者3.50',
+            value: 1,
+            itemStyle: {color: '#d08c45'}
+        }, {
+            name: '鉴湖学者3.76',
+            value: 1,
+            itemStyle: {color: '#ca843b'}
+        }]
+    },{
+        name: '上海市2.95',
+        itemStyle: {
+            color: '#af6a22'
+        },
+        children: [
+            {
+            name: '浦江学者2.16',
+            value: 1,
+            itemStyle: {color: '#d48b3e'}
+        },
+        {
+            name: '晨辉学者2.67',
+            value: 1,
+            itemStyle: {
+                color: '#cc853a'
+            }
+        }, {
+            name: '海洋学者2.87',
+            value: 1,
+            itemStyle: {
+                color: '#c67f36'
+            }
+        }, {
+            name: '东方学者3.10',
+            value: 1,
+            itemStyle: {color: '#c0792f'}
+        }, {
+            name: '沪江学者3.96',
+            value: 1,
+            itemStyle: {color: '#b87228'}
+        }]
+    }, {
+        name: '山东省3.57',
+        itemStyle: {
+            color: '#955512'
+        },
+        children: [{
+            name: '齐鲁学者3.17',
+            value: 1,
+            itemStyle: {
+                color: '#ab6720'
+            }
+        }, {
+            name: '鸢都学者3.24',
+            value: 1,
+            itemStyle: {
+                color: '#a2611c'
+            }
+        }, {
+            name: '泰山学者4.29',
+            value: 1,
+            itemStyle: {
+                color: '#9b5a16'
+            }
+        }]
+    },{
+        name: '福建省3.58',
+        itemStyle: {
+            color: '#81470b'
+        },
+        children: [
+            {
+            name: '桐江学者2.82',
+            value: 1,
+            itemStyle: {color: '#9b5e1e'}
+        },
+        {
+            name: '闽江学者3.02',
+            value: 1,
+            itemStyle: {
+                color: '#945819'
+            }
+        }, {
+            name: '旗山学者3.97',
+            value: 1,
+            itemStyle: {
+                color: '#8d5214'
+            }
+        }, {
+            name: '金山学者4.49',
+            value: 1,
+            itemStyle: {color: '#874d10'}
+        }]
+    }, {
+        name: '安徽省3.70',
+        itemStyle: {
+            color: '#643708'
+        },
+        children: [{
+            name: '皖江学者2.91',
+            value: 1,
+            itemStyle: {
+                color: '#6b3c0c'
+            }
+        }]
+    }]
+}, 
+{
+    name: '西部地区2.59',
+    itemStyle: {
+        color: '#f0f00b'
+    },
+    children: [{
+        name: '新疆2.11',
+        itemStyle: {
+            color: '#f1f142'
+        },
+        children: [{
+            name: '天山学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#f7f752'
+            }
+        }, {
+            name: '绿洲学者3.02',
+            value: 1,
+            itemStyle: {
+                color: '#f4f44b'
+            }
+        }]
+    }, {
+        name: '宁夏 2.17',
+        itemStyle: {
+            color: '#eeee33'
+        },
+        children: [{
+            name: '贺兰山学者2.17',
+            value: 1,
+            itemStyle: {
+                color: '#f1f13c'
+            }
+        }]
+    }, {
+        name: '四川省2.22',
+        itemStyle: {
+            color: '#e3e32d'
+        },
+        children: [{
+            name: '雏鹰学者1.71',
+            value: 1,
+            itemStyle: {
+                color: '#f5f548'
+            }
+        }, {
+            name: '西华学者2.07',
+            value: 1,
+            itemStyle: {
+                color: '#eded3a'
+            }
+        }, {
+            name: '杏林学者2.87',
+            value: 1,
+            itemStyle: {
+                color: '#e7e734'
+            }
+        }]
+    }, {
+        name: '西藏 2.36',
+        itemStyle: {
+            color: '#d7d72a'
+        },
+        children: [{
+            name: '珠峰学者2.36',
+            value: 1,
+            itemStyle: {
+                color: '#dcdc33'
+            }
+        }]
+    },{
+        name: '甘肃省2.48',
+        itemStyle: {
+            color: '#c8c827'
+        },
+        children: [{
+            name: '飞天学者2.27',
+            value: 1,
+            itemStyle: {
+                color: '#d6d63a'
+            }
+        }, {
+            name: '萃英学者2.70',
+            value: 1,
+            itemStyle: {
+                color: '#cdcd2f'
+            }
+        }]
+    },{
+        name: '陕西省2.68',
+        itemStyle: {
+            color: '#b7b728'
+        },
+        children: [
+            {
+            name: '翱翔学者1.71',
+            value: 1,
+            itemStyle: {color: '#d9d958'}
+        },
+        {
+            name: '雁塔学者1.87',
+            value: 1,
+            itemStyle: {
+                color: '#d8d853'
+            }
+        }, {
+            name: '胡杨学者2.62',
+            value: 1,
+            itemStyle: {
+                color: '#d4d44b'
+            }
+        }, {
+            name: '西外学者2.62',
+            value: 1,
+            itemStyle: {color: '#cfcf44'}
+        }, {
+            name: '曲江学者2.80',
+            value: 1,
+            itemStyle: {color: '#c9c93c'}
+        }, {
+            name: '长安学者2.87',
+            value: 1,
+            itemStyle: {color: '#c4c437'}
+        }, {
+            name: '华山学者3.17',
+            value: 1,
+            itemStyle: {color: '#bdbd30'}
+        }]
+    },{
+        name: '云南省2.75',
+        itemStyle: {
+            color: '#a3a321'
+        },
+        children: [{
+            name: '东陆学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#b2b22f'
+            }
+        }, {
+            name: '云岭学者4.29',
+            value: 1,
+            itemStyle: {
+                color: '#a9a928'
+            }
+        }]
+    }, {
+        name: '青海省2.90',
+        itemStyle: {
+            color: '#8f8f19'
+        },
+        children: [{
+            name: '昆仑学者2.90',
+            value: 1,
+            itemStyle: {
+                color: '#9a9a1f'
+            }
+        }]
+    }, {
+        name: '重庆市4.29',
+        itemStyle: {
+            color: '#7d7d11'
+        },
+        children: [{
+            name: '两江学者4.29',
+            value: 1,
+            itemStyle: {
+                color: '#868617'
+            }
+        }]
+    }]
+},
+
+{
+    name: '中部地区2.78',
+    itemStyle: {
+        color: '#fd0202'
+    },
+    children: [{
+        name: '内蒙古2.47',
+        itemStyle: {
+            color: '#f06161'
+        },
+        children: [{
+            name: '阴山学者2.47',
+            value: 1,
+            itemStyle: {
+                color: '#f98383'
+            }
+        }, {
+            name: '绿洲学者3.02',
+            value: 1,
+            itemStyle: {
+                color: '#f47474'
+            }
+        }]
+    }, {
+        name: '江西省2.53',
+        itemStyle: {
+            color: '#e34848'
+        },
+        children: [{
+            name: '瑶湖学者1.41',
+            value: 1,
+            itemStyle: {
+                color: '#f76868'
+            }
+        },{
+            name: '天佑学者2.56',
+            value: 1,
+            itemStyle: {
+                color: '#f36161'
+            }
+        }, {
+            name: '梅岭学者2.80',
+            value: 1,
+            itemStyle: {
+                color: '#ee5b5b'
+            }
+        }, {
+            name: '井冈学者3.37',
+            value: 1,
+            itemStyle: {
+                color: '#e85252'
+            }
+        }]
+    },{
+        name: '湖北省2.58',
+        itemStyle: {
+            color: '#d22d2d'
+        },
+        children: [
+            {
+            name: '桂子山学者1.21',
+            value: 1,
+            itemStyle: {color: '#f74f4f'}
+        },
+        {
+            name: '华中学者1.21',
+            value: 1,
+            itemStyle: {
+                color: '#f34747'
+            }
+        }, {
+            name: '珞珈学者2.11',
+            value: 1,
+            itemStyle: {
+                color: '#f33f3f'
+            }
+        }, {
+            name: '工大学者2.27',
+            value: 1,
+            itemStyle: {color: '#f03939'}
+        }, {
+            name: '文澜学者2.34',
+            value: 1,
+            itemStyle: {color: '#ec3c3c'}
+        }, {
+            name: '磁湖学者2.47',
+            value: 1,
+            itemStyle: {color: '#ea3535'}
+        }, {
+            name: '楚天学者2.82',
+            value: 1,
+            itemStyle: {color: '#e42e2e'}
+        }, {
+            name: '地大学者3.50',
+            value: 1,
+            itemStyle: {color: '#e02e2e'}
+        }, {
+            name: '阳光学者3.56',
+            value: 1,
+            itemStyle: {color: '#dd2c2c'}
+        }, {
+            name: '香涛学者4.29',
+            value: 1,
+            itemStyle: {color: '#d72c2c'}
+        }]
+    },{
+        name: '黑龙江省2.90',
+        itemStyle: {
+            color: '#b01e1e'
+        },
+        children: [{
+            name: '龙江学者2.90',
+            value: 1,
+            itemStyle: {
+                color: '#bf2626'
+            }
+        }]
+    }, {
+        name: '湖南省2.98',
+        itemStyle: {
+            color: '#9e0f0f'
+        },
+        children: [
+            {
+            name: '芙蓉学者2.17',
+            value: 1,
+            itemStyle: {color: '#d11f1f'}
+        },
+        {
+            name: '岳麓山学者2.67',
+            value: 1,
+            itemStyle: {
+                color: '#cb1f1f'
+            }
+        }, {
+            name: '潇湘学者2.70',
+            value: 1,
+            itemStyle: {
+                color: '#c51919'
+            }
+        }, {
+            name: '树人学者3.02',
+            value: 1,
+            itemStyle: {color: '#bf1818'}
+        }, {
+            name: '神农学者3.14',
+            value: 1,
+            itemStyle: {color: '#b71515'}
+        }, {
+            name: '湘江学者4.19',
+            value: 1,
+            itemStyle: {color: '#a91313'}
+        }]
+    },{
+        name: '河南省3.53',
+        itemStyle: {
+            color: '#830404'
+        },
+        children: [{
+            name: '中原学者2.16',
+            value: 1,
+            itemStyle: {
+                color: '#980c0c'
+            }
+        },{
+            name: '黄河学者3.40',
+            value: 1,
+            itemStyle: {
+                color: '#850909'
+            }
+        },{
+            name: '嵩山学者4.49',
+            value: 1,
+            itemStyle: {
+                color: '#750505'
+            }
+        }]
+    }]
+} 
+];
+            option = {
+                    title: {
+                        text: '各地区“学者计划”评选条件指数',
+                        subtext:'点击不同色块，了解详细信息',
+                        textStyle: {
+                            fontSize: 14,
+                            align: 'center'
+                        },
+                        subtextStyle: {
+                            align: 'center'
+                        },
+                    },
+                    series: {
+                        type: 'sunburst',
+                        highlightPolicy: 'ancestor',
+                        data: data,
+                        radius: [0, '95%'],
+                        sort: null,
+                        levels: [{}, {
+                            r0: '10%',
+                            r: '25%',
+                            itemStyle: {
+                                borderWidth: 2
+                            },
+                            label: {
+                                rotate: 'tangential'
+                            }
+                        }, {
+                            r0: '25%',
+                            r: '55%',
+                            label: {
+                                align: 'right'
+                            }
+                        }, {
+                            r0: '55%',
+                            r: '57%',
+                            label: {
+                                position: 'outside',
+                                padding: 1,
+                                silent: false
+                            },
+                            itemStyle: {
+                                borderWidth: 1
+                            }
+                        }]
+                    }
+                };
+                myChart.setOption(option);
+			</script>
+           
+        
+			<br>
+            <h3>——为“争”人才，哪个省最“阔气”？</h3>
+            <br>
+            <p>知识经济时代，高水平人才即意味着。各省市及高校提出优厚待遇，除了“学者”称号外，更通过津贴、科研经费、安家费等招揽人才。与参差不齐的评选条件不同，由于地区经济发展水平的差异，待遇条件呈现出了较为明显的地域分布特征。</p>
+          
+            <div id="schedule-provinces" class="chart" style="width:500px;height:400px;">
+            </div>
+            <script type="text/javascript"></script>
+            <script src="assets/maps/china.js"></script>
+            <script>
+                var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'),'customed');
+
+                optionScheduleProvinces = {
+                    title: {
+                        text:"各省“学者计划”待遇指数分布",
+                        x: "left"
+                    },
+                    tooltip: {
+                        trigger: "item"
+                    },
+                    dataRange: {
+                        min: 0.93,
+                        max: 3.09,
+                        y: "bottom",
+                        text: ["高", "低"],
+                        calculable: true,
+                        
+                        precision: 2,
+                        x: "left"
+                    },
+                    toolbox: {
+                        show: false,
+                        orient: "vertical",
+                        x: "right",
+                        y: "bottom",
+                        feature: {
+                            dataView: {
+                                readOnly: false,
+                                show: true
+                            },
+                            mark: {
+                                show: true
+                            },
+                            magicType: {
+                                show: false
+                            },
+                            restore: {
+                                show: true
+                            },
+                            saveAsImage: {
+                                show: true
+                            }
+                        }
+                    },
+                    roamController: {
+                        show: false,
+                        x: "right",
+                        mapTypeControl: {
+                            china: true
+                        },
+                        handlerColor: "rgb(97, 185, 226)",
+                        fillerColor: "#fff",
+                        borderWidth: 0
+                    },
+                    series: [{
+                        type: "map",
+                        map: 'china',
+                        name: "待遇指数",
+                        data: [{
+                                value: 2.45,
+                                name: "安徽"
+                            },
+                            {
+                                value: 1.29,
+                                name: "北京"
+                            },
+                            {
+                                value: 1.72,
+                                name: "福建"
+                            },
+                            {
+                                value: 0.93,
+                                name: "甘肃"
+                            },
+                            {
+                                value: 1.58,
+                                name: "广东"
+                            },
+                            {
+                                value: 2.14,
+                                name: "广西"
+                            },
+                            {
+                                value: 1.17,
+                                name: "河北"
+                            },
+                            {
+                                value: 1.8,
+                                name: "河南"
+                            },
+                            {
+                                value: 1.95,
+                                name: "黑龙江"
+                            },
+                            {
+                                value: 1.61,
+                                name: "湖北"
+                            },
+                            {
+                                value: 2.45,
+                                name: "湖南"
+                            },
+                            {
+                                value: 1.78,
+                                name: "江苏"
+                            },
+                            {
+                                value: 1.69,
+                                name: "江西"
+                            },
+                            {
+                                value: 1.77,
+                                name: "辽宁"
+                            },
+                            {
+                                value: 1.18,
+                                name: "内蒙古"
+                            },
+                            {
+                                value: 1.5,
+                                name: "宁夏"
+                            },
+                            {
+                                value: 1.33,
+                                name: "青海"
+                            },
+                            {
+                                value: 1.75,
+                                name: "山东"
+                            },
+                            {
+                                value: 1.83,
+                                name: "山西"
+                            },
+                            {
+                                value: 1.82,
+                                name: "陕西"
+                            },
+                            {
+                                value: 1.31,
+                                name: "上海"
+                            },
+                            {
+                                value: 1.1,
+                                name: "四川"
+                            },
+                            {
+                                value: 1.31,
+                                name: "天津"
+                            },
+                            {
+                                value: 1.17,
+                                name: "西藏"
+                            },
+                            {
+                                value: 1.83,
+                                name: "香港"
+                            },
+                            {
+                                value: 1.61,
+                                name: "新疆"
+                            },
+                            {
+                                value: 1.46,
+                                name: "云南"
+                            },
+                            {
+                                value: 1.75,
+                                name: "浙江"
+                            },
+                            {
+                                value: 3.09,
+                                name: "重庆"
+                            }
+                        ]
+                    }],
+                };
+                chartScheduleProvinces.setOption(optionScheduleProvinces);
+            </script>
+            <p>【图注：将学者等级、支持周期、所获津贴、科研经费、住房和家眷优待各项进行处理得到满分为5分的“待遇指数”。】</p>
+			
+			<p>在待遇指数地域化的热力图中，中部地区“出手阔绰”，以重庆3.09排在首位，湖北省和安徽省以2.45分并列第二。中部地区以知识创新驱动经济发展，通过优厚待遇吸引高等人才，以弥补地理区位的不足。这些地区科教水平发展形势良好，日前教育部发布的最新《2017年高等学校科技统计资料汇编》显示，湖北省2016年以89亿高校科技经费位居全国第五位。</p>
+			
+            <div id="rise" class="chart" style="width:700px;height:300px;">
+			</div>
+			<script type="text/javascript">
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('rise'));
+				var dataEAST = [
+					[1, 4, 3.07, 20, 500, 100, 2.61],
+					[2, 2, 1.21, 0, 0, 0, 1.17],
+					[3, 4, 2.06, 0, 200, 20, 1.70],
+					[4, 2, 1.2, 0, 0, 0, 1.17],
+					[5, 2, 2.67, 10, 0, 0, 1.33],
+					[6, 2, 3.50, 40, 200, 50, 2.42],
+					[7, 4, 3.10, 10, 60, 60, 1.37],
+					[8, 2, 2.87, 0, 50, 50, 1.33],
+					[9, 2, 2.92, 10, 0, 0, 1.00],
+					[10, 2, 2.87, 0, 0, 0, 0.67],
+					[11, 2, 3.96, 30, 0, 0, 1.86],
+					[12, 2, 4.49, 3, 200, 30, 2.96],
+					[13, 2, 3.76, 15, 7, 5, 2.71],
+					[14, 2, 1.21, 80, 0, 0, 2.17],
+					[15, 2, 4.49, 0, 0, 0, 1.17],
+					[16, 3, 1.81, 15, 300, 30, 2.77],
+					[17, 2, 2.67, 0, 15, 15, 0.88],
+					[18, 2, 3.12, 3.3, 23.3, 13.3, 0.78],
+					[19, 4, 3.02, 12, 200, 50, 2.12],
+					[20, 2, 2.16, 0, 50, 50, 2.17],
+					[21, 2, 2.37, 0, 0, 0, 1.17],
+					[22, 4, 3.37, 0, 0, 0, 1.00],
+					[23, 3, 2.43, 30, 100, 50, 1.58],
+					[24, 3, 2.16, 0, 0, 0, 1.33],
+					[25, 2, 3.17, 15, 100, 30, 1.63],
+					[26, 2, 3.97, 10, 25, 10, 0.89],
+					[27, 4, 2.27, 25, 100, 50, 1.83],
+					[28, 2, 2.70, 0, 300, 50, 1.96],
+					[29, 2, 2.17, 12, 500, 500, 4.28],
+					[30, 2, 3.02, 6, 0, 0, 2.02],
+					[31, 4, 4.29, 35, 35, 35, 2.20],
+					[32, 2, 1.61, 50, 0, 0, 2.00],
+					[33, 2, 2.77, 30, 0, 0, 1.78],
+					[34, 2, 3.91, 30, 0, 0, 1.17],
+					[35, 2, 2.82, 10, 50, 20, 2.71],
+					[36, 4, 2.91, 20, 40, 20, 1.93],
+					[37, 2, 3.02, 50, 0, , 1.50],
+					[38, 4, 2.67, 54, 0, 0, 1.83],
+					[39, 2, 3.02, 25, 0, 0, 1.58],
+					[40, 2, 1.83, 0, 0, 0, 1.17],
+					[41, 3, 3.50, 20, 60, 20, 1.30],
+					[42, 3, 3.24, 4, 2, 2, 1.41],
+					[43, 2, 1.41, 0, 0, 0, 1.17],
+					[44, 2, 1.21, 80, 500, 500, 3.33],
+					[45, 2, 3.28, 0, 0, 0, 1.17],
+					[46, 4, 3.12, 0, 0, 0, 1.00],
+					[47, 2, 1.71, 10, 0, 0, 1.33],
+					[48, 2, 2.67, 3, 0, 0, 0.93],
+					[49, 4, 2.80, 12, 200, 50, 2.12],
+					[50, 4, 3.66, 0, 20, 10, 1.05],
+					[51, 2, 2.07, 8, 0, 0, 1.30]
+				];
+
+				var dataMID = [
+					[1, 4, 2.82, 30, 0, 0, 2.00],
+					[2, 2, 2.47, 0, 0, 0, 1.17],
+					[3, 2, 2.17, 10, 0, 0, 1.00],
+					[4, 2, 2.27, 8, 50, 25, 2.43],
+					[5, 2, 1.21, 0, 0, 0, 1.38],
+					[6, 2, 3.17, 0, 0, 0, 1.17],
+					[7, 2, 1.21, 10, 0, 0, 1.33],
+					[8, 2, 3.40, 15, 60, 20, 2.75],
+					[9, 4, 3.37, 20, 0, 0, 2.25],
+					[10, 4, 2.90, 20, 50, 20, 1.95],
+					[11, 2, 2.11, 10, 100, 25, 1.04],
+					[12, 2, 2.80, 0, 0, 0, 1.67],
+					[13, 4, 2.67, 40, 0, 0, 1.83],
+					[14, 2, 3.14, 80, 1000, 200, 4.40],
+					[15, 2, 3.02, 50, 800, 400, 3.17],
+					[16, 2, 4.49, 10, 0, 0, 1.22],
+					[17, 2, 2.56, 15, 0, 0, 1.42],
+					[18, 2, 2.34, 3.34, 0, 0, 0.72],
+					[19, 2, 4.29, 10, 20, 20, 2.67],
+					[20, 2, 4.19, 12, 10, 10, 1.40],
+					[21, 2, 2.70, 100, 0, 0, 3.25],
+					[22, 2, 3.56, 18, 0, 0, 0.97],
+					[23, 2, 1.41, 20, 0, 0, 1.42],
+					[24, 2, 2.47, 0, 3, 2, 1.18],
+					[25, 2, 2.67, 20, 0, 0, 1.50],
+					[26, 4, 2.16, 0, 0, 0, 1.50]
+
+				];
+
+				var dataWEST = [
+					[1, 2, 1.71, 8, 0, 0, 2.34],
+					[2, 2, 1.71, 10, 0, 0, 0.83],
+					[3, 2, 2.70, 0, 100, 15, 1.16],
+					[4, 2, 1.21, 10, 0, 0, 1.00],
+					[5, 2, 2.27, 0, 7.5, 7.5, 0.69],
+					[6, 2, 2.17, 0, 200, 200, 1.50],
+					[7, 2, 2.62, 0, 100, 100, 1.50],
+					[8, 4, 2.90, 10, 80, 20, 1.33],
+					[9, 4, 4.29, 6, 20, 20, 3.09],
+					[10, 2, 3.02, 0, 40, 40, 1.38],
+					[11, 2, 4.29, 0, 25, 15, 2.18],
+					[12, 2, 2.80, 20, 80, 80, 3.02],
+					[13, 4, 1.21, 40, 0, 0, 1.83],
+					[14, 2, 2.07, 2.4, 0, 0, 1.21],
+					[15, 2, 2.62, 60, 0, 0, 1.50],
+					[16, 2, 2.87, 0, 30, 30, 1.27],
+					[17, 2, 1.87, 0, 0, 0, 1.17],
+					[18, 4, 4.29, 5, 200, 200, 1.92],
+					[19, 2, 2.87, 30, 0, 0, 1.67],
+					[20, 2, 2.36, 0, 0, 0, 1.17]
+				];
+
+				var schema = [{
+						name: 'scholar',
+						index: 0,
+						text: '名称'
+					},
+					{
+						name: 'class',
+						index: 1,
+						text: '级别'
+					},
+					{
+						name: 'period',
+						index: 2,
+						text: '条件指数'
+					},
+					{
+						name: 'allowance',
+						index: 3,
+						text: '津贴'
+					},
+					{
+						name: 'fund1',
+						index: 4,
+						text: '自然科研经费'
+					},
+					{
+						name: 'fund2',
+						index: 5,
+						text: '人社科研经费'
+					},
+					{
+						name: 'region',
+						index: 6,
+						text: '待遇指数'
+					}
+
+				];
+
+				var lineStyle = {
+					normal: {
+						width: 1,
+						opacity: 0.5
+					}
+				};
+
+				option = {
+					legend: {
+						bottom: 30,
+						data: ['东部经济带', '中部经济带', '西部经济带'],
+						itemGap: 20,
+						textStyle: {
+							color: '#000',
+							fontSize: 14
+						}
+					},
+					tooltip: {
+						padding: 10,
+						backgroundColor: '#222',
+						borderColor: '#777',
+						borderWidth: 1,
+						formatter: function(obj) {
+							var value = obj[0].value;
+							return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+								obj[0].seriesName + ' ' + value[0] + '名称：' +
+								value[6] +
+								'</div>' +
+								schema[1].text + '：' + value[1] + '<br>' +
+								schema[2].text + '：' + value[2] + '<br>' +
+								schema[3].text + '：' + value[3] + '<br>' +
+								schema[4].text + '：' + value[4] + '<br>' +
+								schema[5].text + '：' + value[5] + '<br>';
+						}
+					},
+					// dataZoom: {
+					//     show: true,
+					//     orient: 'vertical',
+					//     parallelAxisIndex: [0]
+					// },
+					parallelAxis: [{
+							dim: 0,
+							name: schema[0].text,
+							inverse: true,
+							max: 51,
+							nameLocation: 'start'
+						},
+						{
+							dim: 1,
+							name: schema[1].text
+						},
+						{
+							dim: 2,
+							name: schema[2].text
+						},
+						{
+							dim: 3,
+							name: schema[3].text
+						},
+						{
+							dim: 4,
+							name: schema[4].text
+						},
+						{
+							dim: 5,
+							name: schema[5].text
+						},
+						{
+							dim: 6,
+							name: schema[6].text
+						}
+					],
+
+					parallel: {
+						left: '5%',
+						right: '18%',
+						bottom: 100,
+						parallelAxisDefault: {
+							type: 'value',
+							name: '待遇指数',
+							nameLocation: 'end',
+							nameGap: 20,
+							nameTextStyle: {
+								color: '#000',
+								fontSize: 12
+							},
+							axisLine: {
+								lineStyle: {
+									color: '#000'
+								}
+							},
+							axisTick: {
+								lineStyle: {
+									color: '#000'
+								}
+							},
+							splitLine: {
+								show: false
+							},
+							axisLabel: {
+								textStyle: {
+									color: '#000'
+								}
+							}
+						}
+					},
+					series: [{
+							name: '东部经济带',
+							type: 'parallel',
+							lineStyle: {
+								color: '#DB7093'
+							},
+							data: dataEAST
+						},
+						{
+							name: '中部经济带',
+							type: 'parallel',
+							lineStyle: {
+								color: '#FF8C75'
+							},
+							data: dataMID
+						},
+						{
+							name: '西部经济带',
+							type: 'parallel',
+							lineStyle: {
+								color: '#5F9EA0'
+							},
+							data: dataWEST
+						}
+					]
+				};
+				myChart.setOption(option);
+			</script>
+            <p>【图注：将“待遇指数”各项指标置于平行坐标图内，通过调试按钮不难发现，中部地区学者计划的待遇在三大经济带中整体上属于最高水平。】</p>
+			
+            <br>
+            <h3>——科研经费vs住房，“人才大战”还有哪些招？</h3>
+            <br>
+            <p>学者计划具有很强大的激励功能，对于学校或教师来说，获得学者的头衔即意味着在高等教育场域中建立起优势地位。一般情况下，当学者计划的“条件值”越高，所获待遇也更加优渥。反之，亦然。</p>
+            <div id="prorelation" class="chart" style="width:700px;height:400px;">
+            </div>
+
+            <script>
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('prorelation'),'customed');
+                option = {
+                    title: {
+                        text: "各省“学者计划”条件指数和待遇指数关系图"
+                    },
+                    tooltip: {
+                        trigger: "axis"
+                    },
+                    legend: {
+                        data: ["3.70", "2.45"]
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {
+                                show: true
+                            },
+                            dataView: {
+                                show: true,
+                                readOnly: true
+                            },
+                            magicType: {
+                                show: false,
+                                type: ["line", "bar"]
+                            },
+                            restore: {
+                                show: true
+                            },
+                            saveAsImage: {
+                                show: true
+                            }
+                        }
+                    },
+                    calculable: true,
+                    xAxis: [{
+                        type: "category",
+                        boundaryGap: false,
+                        data: ["北京", "福建", "甘肃", "广东", "广西", "河北", "河南", "黑龙江", "湖北", "湖南", "江苏", "江西", "辽宁", "内蒙古", "宁夏", "青海", "山东", "山西", "陕西", "上海", "四川", "天津", "西藏", "香港", "新疆", "云南", "浙江", "重庆"]
+                    }],
+                    yAxis: [{
+                        type: "value",
+                        name: "指数"
+                    }],
+                    series: [{
+                            type: "line",
+                            name: "条件指数",
+                            data: [2.13, 3.58, 2.48, 2.38, 2.84, 1.41, 3.35, 2.90, 2.58, 2.98, 2.26, 2.53, 2.86, 2.47, 2.17, 2.90, 2.71, 2.67, 2.49, 3.33, 2.80, 2.84, 2.36, 2.67, 2.77, 2.21, 2.28, 4.29]
+                        },
+                        {
+                            type: "line",
+                            name: "待遇指数",
+                            data: [1.29, 1.72, 0.93, 1.58, 2.14, 1.17, 1.82, 1.95, 1.61, 2.45, 1.71, 1.69, 1.37, 1.18, 1.50, 1.33, 1.61, 1.83, 1.60, 1.84, 2.64, 3.04, 1.17, 1.83, 1.13, 1.72, 2.30, 3.10]
+                        }
+                    ]
+                }
+                myChart.setOption(option);
+            </script>
+			<p>科研经费的高低是吸引科研人才的前往的重要因素。据统计，学者计划中自然理工科的平均科研经费（80万）为人文社科经费（30万）的近3倍。自然理工科对于高精尖实验设备的需求动辄几十上百万，其花费依然不可小觑。省、市、校三级对于同一学科科研经费虽没有明显差异，但省级拨付经费仍略占优势。</p>
+			<br>
+            <div id="subject" class="chart" style="width:600px;height:350px;">
+			</div>
+			<script type="text/javascript">
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('subject'),'customed');
+				option = {
+					title:{
+						text:"各级计划文理学科科研经费对比"
+					},
+					tooltip: {
+						trigger: "item",
+						formatter: "{a} <br/>{b} : {c} ({d}%)"
+					},
+					legend: {
+						orient: "vertical",
+						x: "left",
+						y:"bottom",
+						data: ["人文社科", "自然理工科", "人文校级", "人文市级", "人文省级", "自然校级", "自然市级", "自然省级"]
+					},
+					toolbox: {
+						show: true,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: true
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					},
+					calculable: false,
+					series: [{
+							name: "科研经费",
+							type: "pie",
+							selectedMode: "single",
+							radius: [0, 70],
+							itemStyle: {
+								normal: {
+									label: {
+										position: "inside"
+									},
+									labelLine: {
+										show: false
+									}
+								}
+							},
+							data: [{
+									value: 29.19,
+									name: "人文社科"
+								},
+								{
+									value: 79.42,
+									name: "自然理工科"
+								}
+							]
+						},
+						{
+							name: "科研经费",
+							type: "pie",
+							radius: [100, 140],
+							data: [{
+									value: 35.99,
+									name: "人文校级"
+								},
+								{
+									value: 20.4,
+									name: "人文市级"
+								},
+								{
+									value: 31.19,
+									name: "人文省级"
+								},
+								{
+									value: 64.66,
+									name: "自然校级"
+								},
+								{
+									value: 92.4,
+									name: "自然市级"
+								},
+								{
+									value: 81.19,
+									name: "自然省级"
+								}
+							],
+							roseType: "radius"
+						}
+					],
+					animation: true
+				}
+				myChart.setOption(option);
+			</script>
+            <br>
+
+			<p>不同级别的津贴与科研经费分配特点不同。校级学者计划呈两极化分布，一方面优惠力度有限，津贴集中于10-20万，科研经费集中于0-50万；另一方面也有学校开出津贴（≥50万）和科研经费（≥200万）极具吸引力的条件。相比之下，省级学者计划在津贴上比较稳定，集中于10-30万间，不同科研经费差距较大。</p>
+			<br>
+            <div id="allowance" class="chart" style="width:600px;height:400px;">
+			</div>
+			<script type="text/javascript">
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('allowance','customed'));
+				option = {
+					title:{
+						text:"各级计划津贴与科研经费分布"
+					},
+					tooltip: {
+						trigger: "axis",
+						showDelay: 0,
+						axisPointer: {
+							type: "cross",
+							lineStyle: {
+								type: "dashed",
+								width: 1
+							}
+						}
+					},
+					legend: {
+						data: ["省级", "市级", "校级"],
+						x: "left",
+						y: "bottom",
+						itemWidth: 13,
+						itemHeight: 10
+					},
+					toolbox: {
+						show: true,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataZoom: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: true
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					},
+					xAxis: [{
+						type: "value",
+						power: 1,
+						precision: 2,
+						scale: true,
+						min: 0,
+						max: 200,
+						nameTextStyle: {
+							baseline: "middle"
+						},
+						name: "科研经费",
+						nameLocation: "end",
+						position: "bottom",
+						axisLine: {
+							show: true,
+							lineStyle: {
+								color: "rgb(38, 85, 119)"
+							}
+						}
+					}],
+					yAxis: [{
+						type: "value",
+						power: 1,
+						precision: 2,
+						scale: true,
+						min: 0,
+						max: 60,
+						name: "津贴（年）",
+						nameLocation: "end",
+						position: "bottom",
+						nameTextStyle: {
+							color: "rgb(35, 112, 147)"
+						},
+						axisLine: {
+							show: true,
+							lineStyle: {
+								color: "rgb(39, 87, 127)"
+							}
+						}
+					}],
+					series: [{
+							type: "scatter",
+							name: "省级",
+							data: [
+								[30, 20],
+								[50, 10],
+								[35, 35],
+								[125, 12],
+								[125, 12],
+								[300, 20],
+								[60, 10],
+								[35, 20],
+								[200, 5],
+								[75, 25],
+								[20, 6]
+							]
+						},
+						{
+							type: "scatter",
+							name: "市级",
+							data: [
+								[75, 30],
+								[165, 15],
+								[2, 4],
+								[40, 20]
+							]
+						},
+						{
+							type: "scatter",
+							name: "校级",
+							data: [
+								[115, 3],
+								[40, 15],
+								[35, 10],
+								[17.5, 10],
+								[125, 40],
+								[10, 12],
+								[62.5, 10],
+								[20, 10],
+								[500, 12],
+								[18.3, 3.3],
+								[6, 15],
+								[80, 20],
+								[65, 15],
+								[37.5, 8],
+								[500, 80],
+								[600, 80],
+								[600, 50]
+							]
+						}
+					],
+				
+				}
+				myChart.setOption(option);
+			</script>
+
+			<p>对于外地学者而言，在工作地的居住情况直接影响科研进展，约30%的学者计划都提及了一定程度的住房供给或补贴，而超过80%都是校级学者计划。值得一提的是部分学者计划根据学者个体情况提供住房或住房补贴两种形式，最大化满足学者需求。</p>
+			<br>
+            <div id="house" class="chart" style="width:600px;height:400px;">
+			</div>
+			<script type="text/javascript">
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('house'));
+
+				var item1 = {
+					color: '#F54F4A'
+				};
+				var item2 = {
+					color: '#FF8C75'
+				};
+				var item3 = {
+					color: '#FFB499'
+				};
+
+				var data = [{
+						name: '无提及',
+						value: 69,
+					}, {
+						name: '有住房',
+						value: 10,
+						children: [{
+							name: '省',
+							value: 1,
+							itemStyle: item1,
+							children: [{
+								name: '江西',
+								value: 1,
+								itemStyle: item1
+							}]
+						}, {
+							name: '校',
+							value: 9,
+							children: [{
+									name: '无锡',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '西安',
+									value: 2,
+									itemStyle: item2
+								},
+								{
+									name: '南昌',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '锦州',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '武汉',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '南京',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '石河子',
+									value: 1,
+									itemStyle: item2
+								}, {
+									name: '杭州',
+									value: 1,
+									itemStyle: item2
+								}
+							],
+							itemStyle: item3
+						}],
+						itemStyle: item1
+					},
+
+					{
+						name: '住房/补贴',
+						value: 10,
+						children: [{
+							name: '省',
+							value: 1,
+							itemStyle: item1,
+							children: [{
+								name: '重庆',
+								value: 1,
+								itemStyle: item1
+							}]
+						}, {
+							name: '校',
+							value: 9,
+							children: [{
+									name: '长沙',
+									value: 2,
+									itemStyle: item2
+								},
+								{
+									name: '开封',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '绍兴',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '西安',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '广州',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '合肥',
+									value: 1,
+									itemStyle: item2
+								},
+								{
+									name: '武汉',
+									value: 1,
+									itemStyle: item2
+								}, {
+									name: '泉州',
+									value: 1,
+									itemStyle: item2
+								}
+							],
+							itemStyle: item3
+						}],
+						itemStyle: item2
+					},
+
+					{
+						name: '有补贴',
+						value: 10,
+						children: [{
+								name: '省',
+								value: 2,
+								itemStyle: item1,
+								children: [{
+										name: '广西100w',
+										value: 1,
+										itemStyle: item1
+									},
+									{
+										name: '上海70w',
+										value: 1,
+										itemStyle: item1
+									}
+								]
+							},
+							{
+								name: '市',
+								value: 1,
+								itemStyle: item2,
+								children: [{
+									name: '桂林50w',
+									value: 1,
+									itemStyle: item2
+								}]
+							},
+							{
+								name: '校',
+								value: 7,
+								children: [{
+										name: '郑州80w',
+										value: 1,
+										itemStyle: item3
+									},
+									{
+										name: '济南30w',
+										value: 1,
+										itemStyle: item3
+									},
+									{
+										name: '兰州50w',
+										value: 1,
+										itemStyle: item3
+									},
+									{
+										name: '武汉60w',
+										value: 2,
+										itemStyle: item3
+									},
+									{
+										name: '长沙120w',
+										value: 1,
+										itemStyle: item3
+									},
+									{
+										name: '天津40w',
+										value: 1,
+										itemStyle: item3
+									}
+								],
+								itemStyle: item3
+							}
+						],
+						itemStyle: item3
+					}
+				];
+
+				option = {
+					title:{
+						text:"各计划住房补贴"
+					},
+					series: {
+						radius: ['15%', '80%'],
+						type: 'sunburst',
+						sort: null,
+						highlightPolicy: 'ancestor',
+						data: data,
+						label: {
+							rotate: 'radial'
+						},
+						levels: [],
+						itemStyle: {
+							color: '#ddd',
+							borderWidth: 2
+						}
+					}
+				};
+
+				myChart.setOption(option);
+			</script>
+
+			<p>在自由申报、公开竞争的学者评选机制中，机会的大门似乎对所有高校教师都敞开。而事实上，由于“985”、“211”、“双一流”等高校三六九划分的先天结构性优势，评选中这种平台结构也被惯性考虑，各级学者的评审实则是从各高水平大学中进行人才抢夺。通过提高所需人才的条件门槛，也相应提供更良好的待遇。不置可否，相对弱势学校的学者奖励计划凭借优渥的待遇，能够吸引部分优秀科研人才。然而评选中对平台的偏向又注定着高水平大学科研人员更倾向留在原学校。这种条件下，“马太效应”愈发明显，学术劳动力难以在市场供需调节下进行有效流动。</p>
+			<p>2018年是“长江学者奖励计划”实行的第20个年头，也是众多学者计划在实践中不断成熟的一年。中国学者名称囊括山川湖海、天地人物，本是学术界的百花齐放的繁荣之势，却被指称为“华而不实”的“学术泡沫”。愤怒之余，除了自我慰藉外行人的看热闹，更应当“心无旁骛，专注于追求真实、真知、真理的研究工作”。让学术的归学术，瓜熟蒂落、水到渠成之时学者奖励也就如期而至。</p>
+
+		
+		<!-- Swiper -->
+		<!--<div class="swiper-no-swiping"></div>-->
+
+	<br>
+    <h3>输入自己的条件，看看哪些学者计划适合你？</h3>
+    <br>
+	<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp所属学科:</td>
+					<td>
+						<select onchange="select_sub_change(this.value)">
+							<option value="1">人文</option>
+							<option value="2" selected="selected">理工</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp当前年龄:</td>
+					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="age" placeholder="例如：35" ></td>
+					<!-- <td><input type="text" id="age"></td> -->
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp最高学历:</td>
+					<td>
+						<select onchange="select_edu_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">其他</option>
+							<option value="2">本科</option>
+							<option value="3">硕士</option>
+							<option value="4">博士及以上</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp目前职称:</td>
+					<td>
+						<select onchange="select_job_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">其他</option>
+							<option value="2">国内副教授</option>
+							<option value="3">国外助理教授</option>
+							<option value="4">国内教授</option>
+							<option value="4">国外副教授及以上</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp已获得奖项:</td>
+					<td>
+						<select onchange="select_awd_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">无</option>
+							<option value="2">省部级科技发明等奖项</option>
+							<option value="3">国家级科技发明等奖项</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp已参与科研:</td>
+					<td>
+						<select onchange="select_rhs_change(this.value)">
+							<option value="0" selected="selected"></option>
+							<option value="1">无</option>
+							<option value="2">参与或主持其他级别项目</option>
+							<option value="3">参与或主持省部级项目</option>
+							<option value="4">参与或主持国家级项目</option>
+							<option value="5">参与或主持国家重大专项</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp倾向地域:</td>
+					<td>
+						<tr><input type="checkbox" name="check" value="3" />东部</tr>
+						<tr><input type="checkbox" name="check" value="2" />西部</tr>
+						<tr><input type="checkbox" name="check" value="1" />中部</tr>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp住房补助:</td>
+					<td>
+						<select onchange="select_hss_change(this.value)">
+							<option value="0" selected="selected">否</option>
+							<option value="1">是</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp家属优惠政策:</td>
+					<td>
+						<select onchange="select_fmp_change(this.value)">
+							<option value="0" selected="selected">否</option>
+							<option value="1">是</option>
+						</select>
+					</td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp预期科研补助（万/年）:</td>
+					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="rsg" placeholder="例如：5" ></td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7">
+					<td>&nbsp预期津贴（万/年）:</td>
+					<td><input ime-mode:disabled onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="epa" placeholder="例如：5" ></td>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3"></div>
+				<td><input type="button" value="搜索" onclick="sqlsearch()"></td>
+			</div>
+			
+			<br>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<table border="1" id="datatable"></table>
+				<p id="msg"></p>
+			</div>
+
+		</div>	
+	
+		
+</article>
+
+	</body>
+
+</html>
